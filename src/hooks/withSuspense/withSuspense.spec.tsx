@@ -17,6 +17,7 @@ describe('withSuspense', () => {
 		)
 		const Page = () => {
 			const [isLoading, setLoading] = useState(true)
+
 			return (
 				<div>
 					<button onClick={() => setLoading(false)}>완료하기</button>

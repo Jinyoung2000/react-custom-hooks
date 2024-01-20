@@ -19,14 +19,9 @@
 		"react": {
 			"version": "detect"
 		},
-		"import/external-module-folders": [
-			".yarn"
-		],
+		"import/external-module-folders": [".yarn"],
 		"import/parsers": {
-			"@typescript-eslint/parser": [
-				".ts",
-				".tsx"
-			]
+			"@typescript-eslint/parser": [".ts", ".tsx"]
 		}
 	},
 	"parserOptions": {
@@ -37,31 +32,15 @@
 		"ecmaVersion": 13,
 		"sourceType": "module"
 	},
-	"plugins": [
-		"@typescript-eslint",
-		"react",
-		"import",
-		"react-hooks",
-		"prettier"
-	],
-	"ignorePatterns": [
-		"**/node_modules/**"
-	],
+	"plugins": ["@typescript-eslint", "react", "import", "react-hooks", "prettier"],
+	"ignorePatterns": ["**/node_modules/**"],
 	"rules": {
 		"import/order": [
 			"error",
 			{
 				"warnOnUnassignedImports": true,
 				"newlines-between": "always",
-				"groups": [
-					"builtin",
-					"external",
-					"internal",
-					"parent",
-					"sibling",
-					"index",
-					"type"
-				],
+				"groups": ["builtin", "external", "internal", "parent", "sibling", "index", "type"],
 				"pathGroups": [
 					{
 						"pattern": "@/**",
@@ -77,9 +56,7 @@
 						"group": "builtin"
 					}
 				],
-				"pathGroupsExcludedImportTypes": [
-					"react"
-				]
+				"pathGroupsExcludedImportTypes": ["react"]
 			}
 		],
 		"react/display-off": "off",
@@ -91,13 +68,18 @@
 		"@typescript-eslint/no-empty-interface": "off",
 		"react/display-name": "off",
 		"react-hooks/exhaustive-deps": "warn",
-		"@typescript-eslint/no-non-null-assertion": "off"
+		"@typescript-eslint/no-non-null-assertion": "off",
+		"no-multiple-empty-lines: ": [
+			"error",
+			{
+				"max": 2,
+				"maxEOF": 1
+			}
+		]
 	},
 	"overrides": [
 		{
-			"files": [
-				"*.ts"
-			],
+			"files": ["*.ts"],
 			"rules": {
 				"@typescript-eslint/no-shadow": "error",
 				"no-shadow": "off"
