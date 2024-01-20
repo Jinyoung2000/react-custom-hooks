@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-const useOnce = () => {
+export const useOnce = () => {
 	const isOnce = useRef<boolean>(true)
 
 	useEffect(() => {
@@ -9,5 +9,3 @@ const useOnce = () => {
 
 	return isOnce.current
 }
-
-export default useOnce
